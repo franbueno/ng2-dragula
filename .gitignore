@@ -9,6 +9,7 @@ npm-debug.log
 
 # ignore build and dist for now
 /demo/dist
+/dist/node_modules
 /coverage
 
 # ignore inline compiling
