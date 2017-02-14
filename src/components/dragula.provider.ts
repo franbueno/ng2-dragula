@@ -94,7 +94,11 @@ export class DragulaService {
           sourceModel.splice(dragIndex, 1);
         }
         targetModel.splice(dropIndex, 0, dropElmModel);
-        target.removeChild(dropElm); // element must be removed for ngFor to apply correctly
+        try{
+            target.removeChild(dropElm); // element must be removed for ngFor to apply correctly
+        }catch(err){
+          console.log('dropElm has removed!');
+        }
       }
       this.dropModel.emit([name, dropElm, target, source]);
     });
